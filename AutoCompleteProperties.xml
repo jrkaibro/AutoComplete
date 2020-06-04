@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<Content xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Object id="AutoComplete">
+    <Group>
+      <Name>General</Name>
+      <Type>Main</Type>
+      <Childs>
+        <Group>
+          <Name>Control Info</Name>
+          <Childs>
+            <Prop>
+              <Id>Sort De</Id>
+              <Name>SortDecriptions</Name>
+              <Type>Boolean</Type>
+              <Metadata />
+            </Prop>            
+            <Prop>
+              <Id>Tooltiptext</Id>
+              <Name>Tooltiptext</Name>
+              <Type>Text</Type>
+              <Default>Exemplo Autocomplete</Default>
+              <Metadata />
+            </Prop>
+          </Childs>
+        </Group>
+        <Group>
+          <Name>Action</Name>
+          <Childs>
+            <Prop>
+              <Id>Insert</Id>
+              <Name>Insert</Name>
+              <Type>Boolean</Type>
+              <Default>false</Default>
+              <Metadata />
+            </Prop>
+            <Prop>
+              <Id>Update</Id>
+              <Name>Update</Name>
+              <Type>Boolean</Type>
+              <Default>false</Default>
+              <Metadata />
+            </Prop>
+            <Prop>
+              <Id>ShowNoSuggestion</Id>
+              <Name>ShowNoSuggestion</Name>
+              <Type>Boolean</Type>
+              <Default>false</Default>
+              <Metadata />
+              <Values>
+                <Value id="true" desc="true" />
+                <Value id="false" desc="false" />
+              </Values>
+            </Prop>
+            <Prop>
+              <Id>AutoSelectFrist</Id>
+              <Name>AutoSelectFrist</Name>
+              <Type>Boolean</Type>
+              <Default>false</Default>
+              <Metadata />
+              <Values>
+                <Value id="true" desc="true" />
+                <Value id="false" desc="false" />
+              </Values>
+            </Prop>
+            <Prop>
+              <Id>NoSuggestionNotice</Id>
+              <Name>NoSuggestionNotice</Name>
+              <Type>Text</Type>
+              <Default>No results</Default>
+              <Metadata />
+            </Prop>
+			<Prop>
+				<Id>Verb</Id>
+				<Name>Verb</Name>
+				<Type>Combo</Type>
+				<Default>GET</Default>
+				<Values>
+					<Value id='GET' desc='GET'/>
+					<Value id='POST' desc='POST'/>
+				</Values>
+				<Metadata>
+					<Value name='FlagControlInfoProp'></Value>
+				</Metadata>
+			</Prop>		
+          </Childs>
+        </Group>
+        <Group>
+          <Name>Appearance</Name>
+          <Childs>
+            <Prop>
+              <Id>Class</Id>
+              <Name>Class</Name>
+              <Type>Text</Type>
+              <Default>Attribute</Default>
+              <Metadata />
+            </Prop>
+            <Prop>
+              <Id>Width</Id>
+              <Name>Width</Name>
+              <Type>Text</Type>
+              <Default>400</Default>
+              <Metadata />
+            </Prop>
+            <Prop>
+              <Id>Height</Id>
+              <Name>Height</Name>
+              <Type>Text</Type>
+              <Default>45</Default>
+              <Metadata />
+            </Prop>
+            <Prop>
+              <Id>AutoFill</Id>
+              <Name>AutoFill</Name>
+              <Type>Boolean</Type>
+              <Default>false</Default>
+              <Metadata />
+              <Values>
+                <Value id="true" desc="true" />
+                <Value id="fale" desc="false" />
+              </Values>
+            </Prop>
+            <Prop>
+              <Id>GroupBy</Id>
+              <Name>GroupBy</Name>
+              <Type>Text</Type>
+              <Default>category</Default>
+              <Metadata />
+            </Prop>
+            <Prop>
+              <Id>MaxHeight</Id>
+              <Name>MaxHeight</Name>
+              <Type>Integer</Type>
+              <Default>300</Default>
+              <Metadata />
+            </Prop>
+            <Prop>
+              <Id>MinChars</Id>
+              <Name>MinChars</Name>
+              <Type>Integer</Type>
+              <Default>1</Default>
+              <Metadata />
+            </Prop>
+            <Prop>
+              <Id>TabDisabled</Id>
+              <Name>TabDisabled</Name>
+              <Type>Boolean</Type>
+              <Default>false</Default>
+              <Metadata />
+              <Values>
+                <Value id="true" desc="true" />
+                <Value id="false" desc="false" />
+              </Values>
+            </Prop>
+          </Childs>
+        </Group>
+        <Group>
+          <Name>DataServices</Name>
+          <Childs>
+            <Prop>
+              <Id>RestFull</Id>
+              <Name>RestFull</Name>
+              <Type>Custom</Type>
+              <CustomType>Artech.Genexus.Common.CustomTypes.ControlAttVarReference, Artech.Genexus.Common</CustomType>
+              <Metadata>
+                <Value name="FlagDataTypeFilter">character,varchar,longvarchar</Value>
+                <Value name="FlagSetValueMethod">SetRestFull</Value>
+                <Value name="FlagGetValueMethod">GetRestFull</Value>
+              </Metadata>
+            </Prop>
+          </Childs>
+        </Group>
+        <Group>
+          <Name>Data Bindings</Name>
+          <Childs>
+            <Prop>
+              <Id>SelectedItem</Id>
+              <Name>SelectedItem</Name>
+              <Type>Custom</Type>
+              <CustomType>Artech.Genexus.Common.CustomTypes.ControlAttVarReference, Artech.Genexus.Common</CustomType>
+              <Metadata>
+                <Value name="FlagSetValueMethod">SetSelectedItem</Value>
+                <Value name="FlagGetValueMethod">GetSelectedItem</Value>
+              </Metadata>
+            </Prop>
+            <Prop>
+              <Id>ServiceParameters</Id>
+              <Name>ServiceParameters</Name>
+              <Type>Custom</Type>
+              <CustomType>Artech.Genexus.Common.CustomTypes.ControlAttVarReference, Artech.Genexus.Common</CustomType>
+              <Metadata>
+                <Value name="FlagSetValueMethod">SetServiceParameters</Value>
+                <Value name="FlagGetValueMethod">GetServiceParameters</Value>
+                <Value name="FlagDataTypeFilter">AutoCompleteParams</Value>
+              </Metadata>
+            </Prop>
+          </Childs>
+        </Group>
+      </Childs>
+    </Group>
+  </Object>
+</Content>

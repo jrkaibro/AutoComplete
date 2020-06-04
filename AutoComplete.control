@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<ControlDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Version>1.2.0</Version>
+  <DataSourceAllowed>None</DataSourceAllowed>
+  <CustomDataSources />
+  <AutoGrowSupported>false</AutoGrowSupported>
+  <IncludeInControlInfo>false</IncludeInControlInfo>
+  <SupportFiles>
+    <Directory>content</Directory>
+    <Directory>dist</Directory>
+    <Directory>scripts</Directory>
+    <Directory>src</Directory>
+  </SupportFiles>
+  <iOS_SupportFiles />
+  <Android_SupportFiles />
+  <BB_SupportFiles />
+  <RuntimeRender>AutoCompleteRender.js</RuntimeRender>
+  <GxResources>AutoComplete.xpz</GxResources>
+  <HeightPropertyName>Height</HeightPropertyName>
+  <WidthPropertyName>Width</WidthPropertyName>
+  <ResizeSupported>true</ResizeSupported>
+  <ObjClass>AutoComplete</ObjClass>
+  <Description>AutoComplete</Description>
+  <Id>00000000-0000-0000-0000-000000000000</Id>
+  <Name>AutoComplete</Name>
+  <Platforms />
+  <ShowMethod>show</ShowMethod>
+  <ReferencedFiles>
+    <File>content\styles.css</File>
+    <File>scripts\jquery.mockjax.js</File>
+    <File>src\jquery.autocomplete.js</File>
+    <File>scripts\action.js</File>
+  </ReferencedFiles>
+  <iOS_ReferencedFiles />
+  <Android_ReferencedFiles />
+  <BB_ReferencedFiles />
+  <Constructor>
+    <Parameters />
+    <Name>AutoComplete</Name>
+  </Constructor>
+  <PropertiesDefinition>AutoCompleteProperties.xml</PropertiesDefinition>
+  <DesignRender>AutoCompleteRender.xsl</DesignRender>
+  <ToolboxIcon>Icon\AutoComplete.ico</ToolboxIcon>
+  <ControlType />
+    <Categories>
+    <Category>Knet App</Category>
+  </Categories>
+  <Events>
+    <Event>onclick</Event>
+  </Events>
+  <Methods />
+    <Actions>
+		<Action>
+			<Order>0</Order>
+			<ActionProperties>
+			<Property>
+				<Key>
+					<string>Name</string>
+				</Key>
+				<Value>
+					<string>SelectedItem</string>
+				</Value>
+			</Property>
+			<Property>
+				<Key>
+					<string>ATTCUSTOMTYPE</string>
+				</Key>
+				<Value>
+					<string>SelectedItem</string>
+				</Value>
+			</Property>
+			</ActionProperties>
+			<Data />
+			<ActionType>VarDeclaration</ActionType>
+		</Action>
+		<Action>
+			<Order>1</Order>
+			<ActionProperties>
+			<Property>
+				<Key>
+					<string>SelectedItem</string>
+				</Key>
+				<Value>
+					<string>&amp;SelectedItem</string>
+				</Value>
+			</Property>
+			</ActionProperties>
+			<Data />
+			<ActionType>SetPropertyToControl</ActionType>
+		</Action>
+		<Action>
+			<Order>2</Order>
+			<ActionProperties>
+			<Property>
+				<Key>
+					<string>Name</string>
+				</Key>
+				<Value>
+					<string>Services</string>
+				</Value>
+			</Property>
+			<Property>
+				<Key>
+					<string>ATTCUSTOMTYPE</string>
+				</Key>
+				<Value>
+					<string>Varchar</string>
+				</Value>
+			</Property>
+			<Property>
+				<Key>
+					<string>AttMaxLen</string>
+				</Key>
+				<Value>
+					<string>100</string>
+				</Value>
+			</Property>
+			</ActionProperties>
+			<Data />
+			<ActionType>VarDeclaration</ActionType>
+		</Action>
+		<Action>
+			<Order>3</Order>
+			<ActionProperties>
+			<Property>
+				<Key>
+					<string>RestFull</string>
+				</Key>
+				<Value>
+					<string>&amp;Services</string>
+				</Value>
+			</Property>
+			</ActionProperties>
+			<Data />
+			<ActionType>SetPropertyToControl</ActionType>
+		</Action>
+		<Action>
+			<Order>4</Order>
+			<ActionProperties>
+			<Property>
+				<Key>
+					<string>Name</string>
+				</Key>
+				<Value>
+					<string>parms</string>
+				</Value>
+			</Property>
+			<Property>
+				<Key>
+					<string>ATTCUSTOMTYPE</string>
+				</Key>
+				<Value>
+					<string>AutoCompleteParams</string>
+				</Value>
+			</Property>
+			</ActionProperties>
+			<Data />
+			<ActionType>VarDeclaration</ActionType>
+		</Action>
+		<Action>
+			<Order>5</Order>
+			<ActionProperties>
+			<Property>
+				<Key>
+					<string>Name</string>
+				</Key>
+				<Value>
+					<string>parm</string>
+				</Value>
+			</Property>
+			<Property>
+				<Key>
+					<string>ATTCUSTOMTYPE</string>
+				</Key>
+				<Value>
+					<string>AutoCompleteParams.Param</string>
+				</Value>
+			</Property>
+			</ActionProperties>
+			<Data />
+			<ActionType>VarDeclaration</ActionType>
+		</Action>
+		<Action>
+			<Order>6</Order>
+			<ActionProperties>
+			<Property>
+				<Key>
+					<string>ServiceParameters</string>
+				</Key>
+				<Value>
+					<string>&amp;parms</string>
+				</Value>
+			</Property>
+			</ActionProperties>
+			<Data />
+			<ActionType>SetPropertyToControl</ActionType>
+		</Action>
+		
+		<Action>
+			<Order>7</Order>
+			<ActionProperties />
+			<Data>
+//Sample code for AutoComplete
+			
+Event Start
+	Do 'AutoComplete'
+EndEvent
+
+Sub 'AutoComplete'
+	&amp;Services = 'DPSearch' // set here the service to execute
+EndSub
+ 
+//AutoComplete control OnClick event handler 
+Event AutoComplete1.OnClick
+	msg(!"Selected : " + &amp;SelectedItem.ID + ' - '+&amp;SelectedItem.VALUE)
+EndEvent
+  		</Data>
+      <ActionType>CodeSnippet</ActionType>
+    </Action>
+	 </Actions>
+  <IsPublic>true</IsPublic>
+  <Android_IsScrollable>false</Android_IsScrollable>
+</ControlDefinition>
